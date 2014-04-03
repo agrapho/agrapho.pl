@@ -1,0 +1,274 @@
+/*
+Theme Name: Twenty Thirteen
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@font-face {
+	font-family: bank_gothic;  
+	src: local('bank_gothic_mbt_pl'), 
+		url("fonts/bank_gothic_mbt_pl.ttf") format('truetype');  
+	font-weight: normal;
+}
+
+body {
+	background: #000000;
+}
+
+p,a,h1,h2,h3 {
+	font-family: bank_gothic;
+	letter-spacing: 1px;
+	color: #FFFFFF;
+}
+
+p {
+	line-height: 2em;
+	font-size: 1.1em;
+}
+
+input, textarea {
+	color: #000000;
+}
+
+.navbar-wrapper {
+	background: #000000;
+}
+
+.navbar {
+	background-color: #000000;
+	border: 0;
+	height: 70px;
+	padding: 15px 0;
+}
+
+.navbar > .row-fluid {
+	background-image: url("images/navbar-bg-stripe.png");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.nav li {
+	display: inline;
+}
+
+.navbar-nav {
+	padding-top: 12px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	font-family: bank_gothic;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #CCCCCC;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+	background-color: transparent;
+}
+
+#front-page-header {
+}
+
+#front-page-header {
+	height: 480px;
+}
+
+.carousel,
+#header-bubbles {
+	height: 490px;
+	width: 100%;
+}
+
+#header-carousel {
+	position: relative;
+	top: 70px;
+}
+
+.carousel-control {
+	width: 60px;
+}
+
+#header-logo {
+	width: 55%;
+}
+
+#header-logo img {
+	position: fixed;
+}
+
+#logo-part-1 {
+	z-index: 9999;
+}
+
+#logo-part-2 {
+	z-index: 9998;
+}
+
+#logo-part-3 {
+	z-index: 9999;
+}
+
+#logo-part-4 {
+	z-index: 9999;
+}
+
+#logo-part-5 {
+	z-index: 9997;
+}
+
+#logo-part-6 {
+	z-index: 9999;
+}
+
+#logo-small {
+	position: absolute;
+	top: 10px;
+	width: 100px;
+}
+
+#header-bubbles {
+	position: relative;
+}
+
+.bubble {
+	position: absolute;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.bubble p {
+	display: none;
+	text-shadow: black 0.1em 0.1em 0.1em;
+	padding: 70px 15px;
+	z-index: 9999;
+}
+
+#content {
+	background: #000000;
+	margin-top: 80px;
+}
+
+.divider {
+	background: #000000;
+	height: 300px;
+}
+
+.bg-section {
+	min-height: 500px;
+	margin-bottom: 25px;
+
+    	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	
+}
+
+.bg-section p {
+	font-size: 1.2em;
+	text-shadow: black 0.1em 0.1em 0.1em;
+	padding: 1em 0;
+}
+
+.bg-section a {
+	font-size: 1.2em;
+	color: #42BEC3;
+}
+
+.bg-section > .row-fluid {
+        background-image: -webkit-gradient(
+		linear, left top, left bottom, from(rgba(40,40,40,0.7)),
+		to(rgba(200,200,200,1.0))
+	);
+
+	/* FF3.6+ */
+	background-image: -moz-linear-gradient(
+		rgba(40,40,40,0.7) 0%, rgba(200,200,200,1.0) 100%
+	);
+}
+
+.sub-page-content {
+	padding-top: 1em;
+}
+
+.pricing-packet {
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		right bottom,
+		color-stop(0, #000000),
+		color-stop(1, #808080)
+	);
+	background-image: -o-linear-gradient(right, #000000 0%, #808080 100%);
+	background-image: -moz-linear-gradient(right, #000000 0%, #808080 100%);
+	background-image: -webkit-linear-gradient(right, #000000 0%, #808080 100%);
+	background-image: -ms-linear-gradient(right, #000000 0%, #808080 100%);
+	background-image: linear-gradient(to right, #000000 0%, #808080 100%);
+
+	padding-right: 0px;
+}
+
+.pricing-packet h1 {
+	color: #42BEC3;
+}
+
+.pricing-bar {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 5px;
+	background-color: #42BEC3;
+}
+
+.pricing-packet-button {
+	background: #444444;
+	text-align: center;
+	cursor: pointer;
+}
+
+.pricing-packet-details {
+	display: none;
+}
+
+.footer {
+	width: 100%;     
+	background: #000000;
+}
+
+.footer a {
+}
+
+.footer .content {
+	text-align: center;
+	padding: 10px;
+	font-size: 9pt;
+	margin-top:20px;
+}
+
+
+
+
+
+
+.bg-section-1 {
+	background: url('http://www.tapeteos.pl/data/media/633/big/interior_design_1920x1200_142.jpg') no-repeat center center fixed;
+}
+
+.bg-section-2 {
+	background: url('http://www.tapeteos.pl/data/media/633/big/interior_design_1920x1200_135.jpg') no-repeat center center fixed;
+}
