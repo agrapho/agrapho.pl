@@ -206,6 +206,7 @@ input, textarea {
 	padding-top: 1em;
 }
 
+/*=========== pricing packets ===========*/
 .pricing-packet {
 	background-image: -webkit-gradient(
 		linear,
@@ -227,12 +228,24 @@ input, textarea {
 	color: #42BEC3;
 }
 
+.pricing-packet-summary,
+.pricing-packet-overview {
+	position: relative;
+}
+
 .pricing-bar {
 	position: absolute;
-	left: 0px;
-	bottom: 0px;
+	left: -15px;
 	width: 5px;
 	background-color: #42BEC3;
+}
+
+.pricing-packet-summary .pricing-bar {
+	bottom: 0px;
+}
+
+.pricing-packet-overview .pricing-bar {
+	height: 100%;
 }
 
 .pricing-packet-button {
@@ -244,6 +257,7 @@ input, textarea {
 .pricing-packet-details {
 	display: none;
 }
+/*======================================*/
 
 /*============= elastislide ============*/
 .elastislide-horizontal {
