@@ -128,6 +128,21 @@ function generate_dynamic_thumb($path, $size){
     return get_bloginfo( 'name' ) . $insert . $old_title . $num;
 }
 
+function get_category_tags($category) {
+      query_posts(array('category_name' => $category->cat_name, 'order' => 'asc'));
+      if (have_posts()) :
+          while (have_posts()) : the_post();
+              $posttags = get_the_tags();
+              if ($posttags) {
+                  foreach($posttags as $tag) {
+                      $all_tags_arr[] = $tag->name;
+                  }
+              }
+          endwhile;
+      endif; 
+
+      return array_unique($all_tags_arr);
+}
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 add_filter( 'wp_title', 'page_title');

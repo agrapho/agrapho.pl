@@ -25,7 +25,7 @@ body {
 	background: #000000;
 }
 
-p,a,h1,h2,h3 {
+p,a,h1,h2,h3,li {
 	font-family: bank_gothic;
 	letter-spacing: 1px;
 	color: #FFFFFF;
@@ -205,6 +205,93 @@ input, textarea {
 .sub-page-content {
 	padding-top: 1em;
 }
+
+/*============= cooperation =============*/
+.cooperation-phase {
+	margin: 2em 0 6em;
+}
+
+.cooperation-phase-images {
+	padding: 0;
+}
+
+.cooperation-phase-style-2 .cooperation-phase-images,
+.cooperation-phase-style-2 .cooperation-phase-name {
+	float: right;
+}
+
+.cooperation-phase-style-1 .cooperation-phase-content {
+	padding-left: 3em;
+}
+
+.cooperation-phase-style-2 .cooperation-phase-content {
+	float: left;
+	padding-right: 3em;
+}
+
+.cooperation-phase-images img {
+	margin-bottom: 1em;
+	clear: both;
+	width: 200px;
+	height: 150px;
+}
+
+.cooperation-phase-style-1 .cooperation-phase-images img {
+	float: left;
+}
+
+.cooperation-phase-style-2 .cooperation-phase-images img {
+	float: right;
+}
+
+.cooperation-phase-images img:last-child {
+	margin-bottom: 0;
+}
+
+.cooperation-phase-brackets {
+	position: absolute;
+	height: 100%;
+	width: 3em;
+	border: solid 5px #42BEC3;
+}
+
+.cooperation-phase-style-1 .cooperation-phase-brackets {
+	left: 0px;
+	border-right-style: none;
+}
+
+.cooperation-phase-style-2 .cooperation-phase-brackets {
+	right: 0px;
+	border-left-style: none;
+}
+
+.cooperation-phase-name {
+	display: table;
+}
+
+.cooperation-phase-name h1 {
+	display:table-cell;
+        vertical-align:middle;
+}
+
+.cooperation-phase-style-1 .cooperation-phase-name h1 {
+	text-align: right;
+}
+
+.cooperation-phase-style-2 .cooperation-phase-name h1 {
+	text-align: left;
+}
+
+.cooperation-sub-phase {
+	display: table;
+}
+
+.cooperation-sub-phase-content {
+	display:table-cell;
+        vertical-align:middle;
+}
+
+/*=======================================*/
 
 /*=========== pricing packets ===========*/
 .pricing-packet {
