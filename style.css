@@ -250,20 +250,27 @@ input, textarea {
 	padding: 0;
 }
 
-.elastislide-wrapper {
-	background-color: transparent;
-}
-
 .elastislide-carousel ul li a img {
 	border: 4px solid transparent;
 }
 
-.elastislide-horizontal nav span.elastislide-next {
-	right: -40px;
+.elastislide-wrapper {
+	background-color: transparent;
+}
+
+.elastislide-wrapper nav span {
+	background: transparent;
+	text-indent: initial;
+	font-size: 2em;
+	color: #CCCCCC;
 }
 
 .elastislide-horizontal nav span {
 	left: -40px;
+}
+
+.elastislide-horizontal nav span.elastislide-next {
+	right: -40px;
 }
 /*======================================*/
 
