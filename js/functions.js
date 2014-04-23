@@ -8,7 +8,7 @@
       }
     });
     $('.pricing-packet-summary').each(function() {
-      $(this).height(max_height + 40);
+      $(this).height(max_height + 35);
     });
 
     packet_count = $('.pricing-packet-summary .pricing-bar').length;

@@ -236,7 +236,7 @@ input, textarea {
 .pricing-bar {
 	position: absolute;
 	left: -15px;
-	width: 5px;
+	width: 8px;
 	background-color: #42BEC3;
 }
 
@@ -257,6 +257,12 @@ input, textarea {
 .pricing-packet-details {
 	display: none;
 }
+
+.pricing-packet-price {
+	font-size: 1.2em;
+	text-align: center;
+}
+
 /*======================================*/
 
 /*============= elastislide ============*/

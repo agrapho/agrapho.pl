@@ -8,7 +8,6 @@ Template Name: Pricing packets
       $args = array( 'post_type' => 'pricing-packet',
                      'posts_per_page' => -1,
                      'category' => $packet_category->term_id,
-	             'orderby' => title,
 	             'order' => 'ASC' );
       $posts = get_posts( $args ); ?>
       <div class="row">

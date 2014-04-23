@@ -14,7 +14,7 @@
     <div class="pricing-packet-button">
         <p>Cena</p>
     </div>
-    <div class="pricing-packet-details">
+    <div class="pricing-packet-details pricing-packet-price">
         <p><?php echo get_post_meta(get_the_ID(),'wpcf-pricing-packet-price',TRUE); ?></p>
     </div>
 </div>
