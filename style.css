@@ -245,6 +245,28 @@ input, textarea {
 	display: none;
 }
 
+/*============= elastislide ============*/
+.elastislide-horizontal {
+	padding: 0;
+}
+
+.elastislide-wrapper {
+	background-color: transparent;
+}
+
+.elastislide-carousel ul li a img {
+	border: 4px solid transparent;
+}
+
+.elastislide-horizontal nav span.elastislide-next {
+	right: -40px;
+}
+
+.elastislide-horizontal nav span {
+	left: -40px;
+}
+/*======================================*/
+
 .footer {
 	width: 100%;     
 	background: #000000;
