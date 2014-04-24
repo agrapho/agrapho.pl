@@ -30,7 +30,7 @@ Template Name: Cooperation
                         } ?>
                 </div>
                 <div class="col-md-3 cooperation-phase-name">
-                    <h1><?php echo $cooperation_subcategory; ?></h1>
+                    <h2><?php echo $cooperation_subcategory; ?></h2>
                 </div>
                 <div class="col-md-6 cooperation-phase-content">
                     <div class="cooperation-phase-brackets"></div>

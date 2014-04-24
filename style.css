@@ -31,9 +31,21 @@ p,a,h1,h2,h3,li {
 	color: #FFFFFF;
 }
 
-p {
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+p, li, a {
 	line-height: 2em;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 
 input, textarea {
@@ -68,7 +80,7 @@ input, textarea {
 .navbar-inverse .navbar-nav > li > a {
 	font-family: bank_gothic;
 	font-weight: bold;
-	font-size: 1.1em;
+	font-size: 0.9em;
 	color: #CCCCCC;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -186,7 +198,7 @@ input, textarea {
 }
 
 .bg-section a {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	color: #42BEC3;
 }
 
@@ -203,7 +215,7 @@ input, textarea {
 }
 
 .sub-page-content {
-	padding-top: 1em;
+	margin-top: 4em;
 }
 
 /*============= cooperation =============*/
@@ -269,16 +281,16 @@ input, textarea {
 	display: table;
 }
 
-.cooperation-phase-name h1 {
+.cooperation-phase-name h2 {
 	display:table-cell;
         vertical-align:middle;
 }
 
-.cooperation-phase-style-1 .cooperation-phase-name h1 {
+.cooperation-phase-style-1 .cooperation-phase-name h2 {
 	text-align: right;
 }
 
-.cooperation-phase-style-2 .cooperation-phase-name h1 {
+.cooperation-phase-style-2 .cooperation-phase-name h2 {
 	text-align: left;
 }
 
@@ -292,6 +304,7 @@ input, textarea {
 }
 
 /*=======================================*/
+
 
 /*=========== pricing packets ===========*/
 .pricing-packet {
@@ -311,13 +324,19 @@ input, textarea {
 	padding-right: 0px;
 }
 
-.pricing-packet h1 {
+.pricing-packet h2 {
 	color: #42BEC3;
 }
 
 .pricing-packet-summary,
 .pricing-packet-overview {
 	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.pricing-packet-summary{
+	padding-bottom: 1em;
 }
 
 .pricing-bar {
@@ -352,6 +371,7 @@ input, textarea {
 
 /*======================================*/
 
+
 /*============= elastislide ============*/
 .elastislide-horizontal {
 	padding: 0;
@@ -381,9 +401,11 @@ input, textarea {
 }
 /*======================================*/
 
+
 .footer {
 	width: 100%;     
 	background: #000000;
+	margin-top: 4em;
 }
 
 .footer a {

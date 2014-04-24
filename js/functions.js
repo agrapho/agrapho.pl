@@ -1,6 +1,6 @@
 +function($) {
 
-  $(document).ready(function() {
+  $(window).load(function() {
     var max_height = 0;
     $('.cooperation-phase').each(function() {
       max_height = 0;
@@ -21,7 +21,7 @@
       }
     });
     $('.pricing-packet-summary').each(function() {
-      $(this).height(max_height + 35);
+      $(this).height(max_height);
     });
 
     packet_count = $('.pricing-packet-summary .pricing-bar').length;

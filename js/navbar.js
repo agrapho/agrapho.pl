@@ -12,7 +12,7 @@
     // add 'active' class to clicked link and scroll
     $(this).addClass("active");
     $('html, body').animate({
-        scrollTop: $( $(this).find("a").attr('href') ).offset().top - 60
+        scrollTop: $( $(this).find("a").attr('href') ).offset().top - 70
     }, 500);
     return false;
   });

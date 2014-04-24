@@ -1,6 +1,6 @@
 <div class="pricing-packet-summary">
     <div class="pricing-bar"></div>
-    <h1><?php echo the_title(); ?></h1>
+    <h2><?php echo the_title(); ?></h2>
     <p><?php echo $post->post_content; ?></p>
 </div>
 <div class="pricing-packet-overview">

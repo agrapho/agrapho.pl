@@ -9,7 +9,7 @@
           <?php $temp_query = $wp_query; ?>
           <?php query_posts(array('post_parent' => get_the_ID(), 'post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc')); while (have_posts()) { the_post(); ?>
             <div id="<?php echo $post->post_name; ?>" class="sub-page-content">
-              <h2><?php the_title(); ?></h2>
+              <h1><?php the_title(); ?></h1>
               <?php $page_template = get_page_template_slug(); ?>
               <?php if($page_template == "") { ?>
               <?php     the_content();

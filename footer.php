@@ -1,7 +1,7 @@
 <div class="footer">
 
   <div id="kontakt" class="container">
-    <h2>Kontakt</h2>
+    <h1>Kontakt</h1>
     <?php echo do_shortcode('[contact-form-7 id="76"]'); ?>
   </div>
 
