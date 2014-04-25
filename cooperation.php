@@ -4,10 +4,10 @@ Template Name: Cooperation
 */
 ?>
 
-<?php echo the_content(); ?>
 
-<div class="row-fluid">
-<?php $post_data = get_post($post->post_parent);
+<div class="container">
+<?php echo the_content();
+      $post_data = get_post($post->post_parent);
       $cooperation_category = get_category_by_slug('cooperation');
       $temp_query = $wp_query;
       $cooperation_subcategories = get_category_tags($cooperation_category);

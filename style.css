@@ -383,6 +383,8 @@ input, textarea {
 
 .elastislide-wrapper {
 	background-color: transparent;
+	margin: 30px 0;
+	box-shadow: none;
 }
 
 .elastislide-wrapper nav span {

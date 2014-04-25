@@ -10,7 +10,7 @@ Template Name: Pricing packets
                      'category' => $packet_category->term_id,
 	             'order' => 'ASC' );
       $posts = get_posts( $args ); ?>
-      <div class="row">
+      <div class="container">
           <?php foreach ( $posts as $post ) { ?>
           <div class="pricing-packet col-md-3">
                 <?php get_template_part( 'pricing-packet', get_post_format($post->ID) ); ?>
