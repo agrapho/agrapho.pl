@@ -3,9 +3,24 @@
 <div id="content">
     <?php while ( have_posts() ) : the_post(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	  <div class="entry-content container">
-            <?php the_content(); ?>
-	  </div>
+
+          <?php
+            $background_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full')[0];
+            if ($background_image_url) {
+          ?>
+              <section id="<?php echo $post->post_name; ?>" class="bg-section" style="background: url(<?php echo $background_image_url ?>) no-repeat center center fixed;">
+                <div class="row-fluid">
+                  <div class="entry-content container">
+                    <p><?php echo the_content(); ?></p>
+                  </div>
+                </div>
+              </section>
+          <?php } else { ?>
+ 	      <div class="entry-content container">
+                <?php the_content(); ?>
+	      </div>
+          <?php } ?>
+
           <?php $temp_query = $wp_query; ?>
           <?php query_posts(array('post_parent' => get_the_ID(), 'post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc')); while (have_posts()) { the_post(); ?>
             <div id="<?php echo $post->post_name; ?>" class="sub-page-content">
