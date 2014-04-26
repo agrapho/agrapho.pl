@@ -19,24 +19,26 @@
     <div class="row-fluid">
     <?php if (!is_front_page()) { ?>
       <div class="container">
-        <a href="<?php echo home_url('/'); ?>#strona-glowna">
+        <a href="<?php echo home_url('/'); ?>">
           <img id="logo-small" class="gray aligncenter" src="<?php echo get_stylesheet_directory_uri()."/images/logo_small.png"; ?>" />
         </a>
       </div>
     <?php } ?>
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-wrapper container">
+            <div class="navbar-collapse collapse pull-right">
+              <?php get_template_part('menu'); ?>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
       </div>
-      <div class="navbar-collapse collapse pull-right">
-        <?php get_template_part('menu'); ?>
-      </div><!--/.nav-collapse -->
-    </div>
     </div><!--/.row-fluid -->
   </div><!--/.navbar -->
 

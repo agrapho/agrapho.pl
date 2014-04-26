@@ -10,7 +10,7 @@
         left0: left_pos_ref,
         left1: left_pos_ref,
 	top0 : top_pos_ref,
-	top1 : 10,
+	top1 : 15,
 	width0: div_width,
 	width1: 100,
 	opacity0: 1.0,
@@ -22,7 +22,7 @@
         left0: left_pos_ref + div_width * 0.015,
         left1: left_pos_ref,
 	top0 : top_pos_ref + div_width * 0.2,
-	top1 : 10,
+	top1 : 15,
 	width0: div_width * 0.09,
 	width1: 42,
         opacity0: 1.0,
@@ -34,7 +34,7 @@
         left0: left_pos_ref + div_width * 0.112,
         left1: left_pos_ref + 35,
 	top0 : top_pos_ref + div_width * 0.235,
-	top1 : 35,
+	top1 : 40,
 	width0: div_width * 0.28,
 	width1: 20,
         opacity0: 1.0,
@@ -46,7 +46,7 @@
         left0: left_pos_ref + div_width * 0.395,
         left1: left_pos_ref + 19,
 	top0 : top_pos_ref + div_width * 0.19,
-	top1 : 24,
+	top1 : 29,
 	width0: div_width * 0.09,
 	width1: 38,
         opacity0: 1.0,
@@ -58,7 +58,7 @@
         left0: left_pos_ref + div_width * 0.438,
         left1: left_pos_ref + 37,
 	top0 : top_pos_ref + div_width * 0.198,
-	top1 : 26,
+	top1 : 31,
 	width0: div_width * 0.136,
 	width1: 62,
         opacity0: 0.0,
@@ -70,7 +70,7 @@
         left0: left_pos_ref + div_width * 0.438,
         left1: left_pos_ref + 37,
 	top0 : top_pos_ref + div_width * 0.198,
-	top1 : 26,
+	top1 : 31,
 	width0: div_width * 0.136,
 	width1: 62,
         opacity0: 1.0,
@@ -151,7 +151,7 @@
     var scrollTop = $(this).scrollTop();
 
     $('.bubble').each(function() {
-      if (scrollTop > $(this).offset().top - 80) {
+      if (scrollTop > $(this).offset().top - 90) {
         bubbleSize = 0;
       } else {
         bubbleSize = $(this).data('params').size;

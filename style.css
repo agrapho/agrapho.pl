@@ -53,13 +53,13 @@ input, textarea {
 }
 
 .navbar-wrapper {
-	background: #000000;
+	position: relative;
 }
 
 .navbar {
 	background-color: #000000;
 	border: 0;
-	height: 70px;
+	height: 80px;
 	padding: 15px 0;
 }
 
@@ -74,7 +74,7 @@ input, textarea {
 }
 
 .navbar-nav {
-	padding-top: 12px;
+	padding-top: 24px;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -92,6 +92,27 @@ input, textarea {
 	background-color: transparent;
 }
 
+.navbar-header .navbar-toggle {
+	z-index: 9999;
+}
+
+.page-title-anchor {
+	position: absolute;
+	right: 30px;
+	top: -20px;
+}
+
+.page-title-anchor a {
+	text-decoration: none;
+	font-size: 2em;
+	color: #444444;
+}
+
+.page-title-anchor a:hover {
+	color: #FFFFFF;
+}
+
+/*========== front-page-header ==========*/
 #front-page-header {
 }
 
@@ -148,8 +169,9 @@ input, textarea {
 
 #logo-small {
 	position: absolute;
-	top: 10px;
+	top: 15px;
 	width: 100px;
+	z-index: 9999;
 }
 
 #header-bubbles {
@@ -169,6 +191,7 @@ input, textarea {
 	padding: 70px 15px;
 	z-index: 9999;
 }
+/*=======================================*/
 
 #content {
 	background: #000000;

@@ -12,7 +12,7 @@ Template Name: Pricing packets
       $posts = get_posts( $args ); ?>
       <div class="container">
           <?php foreach ( $posts as $post ) { ?>
-          <div class="pricing-packet col-md-3">
+          <div class="pricing-packet col-md-<?php echo floor(12 / count($posts)); ?>">
                 <?php get_template_part( 'pricing-packet', get_post_format($post->ID) ); ?>
           </div>
           <?php } ?>

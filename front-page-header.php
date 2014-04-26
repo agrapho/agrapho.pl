@@ -2,7 +2,7 @@
 
   <div id="header-carousel" class="carousel slide">
     <div class="carousel-inner">
-      <div class="item active">
+      <div class="item active container">
         <div id="header-logo" class="row-fluid">
           <img id="logo-part-1" class="gray aligncenter" src="<?php echo get_stylesheet_directory_uri()."/images/logo1.png"; ?>" />
           <img id="logo-part-2" class="gray aligncenter" src="<?php echo get_stylesheet_directory_uri()."/images/logo2.png"; ?>" />
@@ -13,7 +13,7 @@
         </div> <!-- /#header-logo -->
       </div>
 
-      <div class="item">
+      <div class="item container">
         <div id="header-bubbles">
           <?php $bubbles_category = get_category_by_slug('header-bubbles');
                 $args = array( 'posts_per_page' => -1,
