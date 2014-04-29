@@ -424,6 +424,15 @@ input, textarea {
 .elastislide-horizontal nav span.elastislide-next {
 	right: -40px;
 }
+
+/*============== colorbox ==============*/
+#colorbox #cboxCurrent {
+	display: none!important;
+}
+
+/*======================================*/
+
+
 /*======================================*/
 
 

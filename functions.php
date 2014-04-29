@@ -144,6 +144,14 @@ function get_category_tags($category) {
       return array_unique($all_tags_arr);
 }
 
+function get_attachments_by_parent_id($parent_id) {
+    $args = array('post_type' => 'attachment',
+                  'post_mime_type' => 'image',
+                  'post_parent' => $parent_id,
+                  'posts_per_page' => -1 );
+    return get_posts( $args );
+}
+
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 add_filter( 'wp_title', 'page_title');
 add_action( 'after_setup_theme', 'theme_setup' );
