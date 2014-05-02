@@ -5,7 +5,8 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
           <?php
-            $background_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full')[0];
+            $page_attachments = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+            $background_image_url = $page_attachments[0];
             if ($background_image_url) {
           ?>
               <section id="<?php echo $post->post_name; ?>" class="bg-section" style="background: url(<?php echo $background_image_url ?>) no-repeat center center fixed;">
@@ -33,7 +34,8 @@
                   <?php the_content(); ?>
               </div>
               <?php } else {
-                        $page_template_part = explode('.php', $page_template)[0];
+                        $page_template_parts = explode('.php', $page_template);
+                        $page_template_part = $page_template_parts[0];
                         get_template_part( $page_template_part );
                     } ?>
             </div> <!--/.container -->

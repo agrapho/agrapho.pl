@@ -15,6 +15,6 @@
         <p>Cena</p>
     </div>
     <div class="pricing-packet-details pricing-packet-price">
-        <p><?php echo get_post_meta(get_the_ID(),'wpcf-pricing-packet-price',TRUE); ?></p>
+        <?php echo get_post_meta(get_the_ID(),'wpcf-pricing-packet-prices',TRUE); ?>
     </div>
 </div>

@@ -9,6 +9,7 @@ Template Name: Cooperation
 <?php echo the_content();
       $post_data = get_post($post->post_parent);
       $cooperation_category = get_category_by_slug('cooperation');
+      $post_parent_category = get_category_by_slug($post_data->post_name);
       $temp_query = $wp_query;
       $cooperation_subcategories = get_category_tags($cooperation_category);
       $wp_query = $temp_query;
@@ -18,7 +19,7 @@ Template Name: Cooperation
                 <div class="col-md-3 cooperation-phase-images">
                   <?php $args = array( 'post_type' => 'post',
                                        'posts_per_page' => -1,
-                                       'category' => $cooperation_category->term_id,
+                                       'category__and' => array($cooperation_category->term_id, $post_parent_category->term_id),
                                        'tag' => $cooperation_subcategory,
 	                               'order' => 'ASC' );
                         $posts = get_posts( $args );
@@ -36,7 +37,7 @@ Template Name: Cooperation
                     <div class="cooperation-phase-brackets"></div>
                   <?php $args = array( 'post_type' => 'post',
                                        'posts_per_page' => -1,
-                                       'category' => $cooperation_category->term_id,
+                                       'category__and' => array($cooperation_category->term_id, $post_parent_category->term_id),
                                        'tag' => $cooperation_subcategory,
 	                               'order' => 'ASC' );
                         $posts = get_posts( $args );
@@ -44,7 +45,7 @@ Template Name: Cooperation
                             <div class="cooperation-sub-phase" style="height: <?php echo (100 / count($posts)); ?>%;">
                                 <div class="cooperation-sub-phase-content">
                                     <h3><?php echo the_title(); ?></h3>
-                                    <?php echo $post->post_content; ?>
+                                    <p><?php echo $post->post_content; ?></p>
                                 </div>
                             </div>
                   <?php } ?>

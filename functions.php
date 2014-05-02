@@ -94,7 +94,6 @@ function generate_dynamic_thumb($path, $size){
     wp_enqueue_script('modernizr',get_template_directory_uri().'/elastislide/js/modernizr.custom.17475.js',array('jquery'), '0.1', false);
 
     wp_enqueue_style('bootstrap',get_template_directory_uri().'/bootstrap/css/bootstrap.css');   
-    wp_enqueue_style('bootstrap-responsive',get_template_directory_uri().'/bootstrap/css/bootstrap-responsive.css');
     wp_enqueue_style('elastislide',get_template_directory_uri().'/elastislide/css/elastislide.css');
     wp_enqueue_style('main',get_stylesheet_uri());
  }
@@ -102,12 +101,6 @@ function generate_dynamic_thumb($path, $size){
  // wp_title filter
  function page_title( $old_title, $sep, $sep_location ){
     $ssep = ' ' . $sep . ' ';
-    // find the type of index page this is
-    if( is_category() ) $insert = $ssep . 'Category';
-    elseif( is_tag() ) $insert = $ssep . 'Tag';
-    elseif( is_author() ) $insert = $ssep . 'Author';
-    elseif( is_year() || is_month() || is_day() ) $insert = $ssep . 'Archives';
-    else $insert = NULL;
 
     // get the page number we're on (index)
     if( get_query_var( 'paged' ) )
@@ -125,7 +118,7 @@ function generate_dynamic_thumb($path, $size){
     $old_title .=  $ssep  . $site_description;
 
     // concoct and return new title
-    return get_bloginfo( 'name' ) . $insert . $old_title . $num;
+    return get_bloginfo( 'name' ) . $old_title . $num;
 }
 
 function get_category_tags($category) {

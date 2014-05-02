@@ -220,8 +220,11 @@ input, textarea {
 	padding: 1em 0;
 }
 
-.bg-section a {
-	font-size: 1.3em;
+.bg-section a,
+.bg-section large,
+.sub-page-content a,
+.sub-page-content large {
+	font-size: 1.2em;
 	color: #42BEC3;
 }
 
@@ -326,6 +329,10 @@ input, textarea {
         vertical-align:middle;
 }
 
+.cooperation-sub-phase-content p {
+	padding-left: 25px;
+}
+
 /*=======================================*/
 
 
@@ -388,8 +395,12 @@ input, textarea {
 }
 
 .pricing-packet-price {
-	font-size: 1.2em;
 	text-align: center;
+}
+
+.pricing-packet-price ul {
+	padding: 0;
+	list-style-type: none;
 }
 
 /*======================================*/
