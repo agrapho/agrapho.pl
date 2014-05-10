@@ -24,7 +24,7 @@ Template Name: Cooperation
 	                               'order' => 'ASC' );
                         $posts = get_posts( $args );
                         foreach ( $posts as $post ) {
-                            $attachments = get_posts( array('post_type' => 'attachment', 'post_parent' => $post->ID) );
+                            $attachments = get_posts( array('post_type' => 'attachment', 'post_parent' => $post->ID, 'order' => 'ASC') );
                             foreach ( $attachments as $attachment ) {
                                 echo wp_get_attachment_image( $attachment->ID, 'thumbnail' );
                             }

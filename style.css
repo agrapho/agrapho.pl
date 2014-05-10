@@ -394,6 +394,11 @@ input, textarea {
 	display: none;
 }
 
+.pricing-packet-details p {
+	padding-left: 20px;
+	color: #42BEC3;
+}
+
 .pricing-packet-price {
 	text-align: center;
 }

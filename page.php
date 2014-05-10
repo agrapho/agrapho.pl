@@ -29,11 +29,23 @@
                 <h1><?php the_title(); ?></h1>
               </div>
               <?php $page_template = get_page_template_slug(); ?>
-              <?php if($page_template == "") { ?>
-              <div class="container">
-                  <?php the_content(); ?>
-              </div>
-              <?php } else {
+              <?php if($page_template == "") {
+                        $page_attachments = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+                        $background_image_url = $page_attachments[0];
+                        if ($background_image_url) { ?>
+                            <section id="<?php echo $post->post_name; ?>" class="bg-section" style="background: url(<?php echo $background_image_url ?>) no-repeat center center fixed;">
+                                <div class="row-fluid">
+                                    <div class="container">
+                                        <p><?php echo the_content(); ?></p>
+                                    </div>
+                                </div>
+                            </section>
+                  <?php } else { ?>
+                            <div class="container">
+                                <?php the_content(); ?>
+                            </div>
+                  <?php }
+                    } else {
                         $page_template_parts = explode('.php', $page_template);
                         $page_template_part = $page_template_parts[0];
                         get_template_part( $page_template_part );
