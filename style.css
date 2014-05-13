@@ -451,6 +451,29 @@ input, textarea {
 /*======================================*/
 
 
+/*============ contact-form ============*/
+.contact-form .contact-form-input-area {
+	padding-right: 4em;
+}
+
+.contact-form .contact-form-input-area .wpcf7-text,
+.contact-form .contact-form-input-area .wpcf7-textarea {
+	width: 100%;
+}
+
+.contact-form .contact-form-input-area .wpcf7-submit {
+	float: right;
+}
+
+.contact-form .contact-form-logo,
+.contact-form .contact-form-logo img {
+	width: 100%;
+}
+
+
+/*======================================*/
+
+
 /*======================================*/
 
 
