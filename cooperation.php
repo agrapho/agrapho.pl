@@ -5,9 +5,27 @@ Template Name: Cooperation
 ?>
 
 
+
+
+<?php
+      $page_attachments = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+      $background_image_url = $page_attachments[0];
+      if ($background_image_url) { ?>
+          <section id="<?php echo $post->post_name; ?>" class="bg-section" style="background: url(<?php echo $background_image_url ?>) no-repeat center center fixed;">
+              <div class="row-fluid">
+                  <div class="entry-content container">
+                      <p><?php echo the_content(); ?></p>
+                  </div>
+              </div>
+          </section>
+<?php } else { ?>
+          <div class="entry-content container">
+              <?php echo the_content(); ?>
+          </div>
+<?php } ?>
+
 <div class="container">
-<?php echo the_content();
-      $post_data = get_post($post->post_parent);
+<?php $post_data = get_post($post->post_parent);
       $cooperation_category = get_category_by_slug('cooperation');
       $post_parent_category = get_category_by_slug($post_data->post_name);
       $temp_query = $wp_query;

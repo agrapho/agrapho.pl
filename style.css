@@ -204,7 +204,7 @@ input, textarea {
 }
 
 .bg-section {
-	min-height: 500px;
+	min-height: 570px;
 	margin-bottom: 25px;
 
     	-webkit-background-size: cover;
@@ -217,7 +217,6 @@ input, textarea {
 .bg-section p {
 	font-size: 1.2em;
 	text-shadow: black 0.1em 0.1em 0.1em;
-	padding: 1em 0;
 }
 
 .bg-section a,
@@ -240,13 +239,22 @@ input, textarea {
 	);
 }
 
+.bg-section > .row-fluid > .container {
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
+
 .sub-page-content {
-	margin-top: 4em;
+	margin-top: 6em;
+}
+
+.sub-page-content h1 {
+	margin-bottom: 0.6em;
 }
 
 /*============= cooperation =============*/
 .cooperation-phase {
-	margin: 2em 0 6em;
+	margin-top: 6em;
 }
 
 .cooperation-phase-images {
@@ -463,6 +471,10 @@ input, textarea {
 
 .contact-form .contact-form-input-area .wpcf7-submit {
 	float: right;
+}
+
+.contact-form .contact-form-info a:hover {
+	color: #42BEC3;
 }
 
 .contact-form .contact-form-logo,
