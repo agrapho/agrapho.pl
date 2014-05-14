@@ -455,6 +455,24 @@ input, textarea {
 	right: -40px;
 }
 
+.elastislide-carousel img {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray; /* IE 6-9 */;
+}
+
+.elastislide-carousel img:hover {
+	-webkit-filter: initial;
+	-moz-filter: initial;
+	-ms-filter: initial;
+	-o-filter: initial;
+	filter: initial;
+	filter: initial; /* IE 6-9 */;
+}
+
 /*============== colorbox ==============*/
 #colorbox #cboxCurrent {
 	display: none!important;
