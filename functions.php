@@ -141,7 +141,8 @@ function get_attachments_by_parent_id($parent_id) {
     $args = array('post_type' => 'attachment',
                   'post_mime_type' => 'image',
                   'post_parent' => $parent_id,
-                  'posts_per_page' => -1 );
+                  'posts_per_page' => -1,
+                  'order' => 'ASC' );
     return get_posts( $args );
 }
 

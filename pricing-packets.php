@@ -3,6 +3,11 @@
 Template Name: Pricing packets
 */
 ?>
+
+<div class="entry-content container">
+      <?php echo the_content(); ?>
+</div>
+
 <?php $post_data = get_post($post->post_parent);
       $packet_category = get_category_by_slug($post_data->post_name);
       $args = array( 'post_type' => 'pricing-packet',

@@ -4,9 +4,6 @@ Template Name: Cooperation
 */
 ?>
 
-
-
-
 <?php
       $page_attachments = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
       $background_image_url = $page_attachments[0];

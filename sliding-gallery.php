@@ -4,11 +4,12 @@ Template Name: Sliding Gallery Page
 */
 ?>
 
-<div class="bg-section">
+<?php $carousel_name = 'carousel-' . $post->post_name; ?>
+<div class="bg-section sliding-gallery">
   <div class="row-fluid">
     <div class="container">
       <!-- Elastislide Carousel -->
-      <ul id="carousel" class="elastislide-list">
+      <ul id="<?php echo $carousel_name; ?>" class="elastislide-list">
       <?php $images = get_attachments_by_parent_id( $post->ID );
             $colorbox_gallery_category = get_category_by_slug('colorbox-gallery');
             foreach($images as $image):
@@ -21,9 +22,12 @@ Template Name: Sliding Gallery Page
                     <li>
                     <?php $is_first_sub_image = true;
                           foreach($image_subgallery as $sub_image):
-                              echo '<a href="' . wp_get_attachment_image_src($sub_image->ID, 'full')[0] . '" class="colorbox colorbox-' . $subgallery_name . '" rel="' . $subgallery_name . '" title="' . $sub_image->post_excerpt . '">';
-                              if ($is_first_sub_image)
-                                  echo '<img src="' . wp_get_attachment_image_src($image->ID, 'thumbnail')[0] . '"></img>';
+                              $subgallery_attachments = wp_get_attachment_image_src( $sub_image->ID, 'full');
+                              echo '<a href="' . $subgallery_attachments[0] . '" class="colorbox colorbox-' . $subgallery_name . '" rel="' . $subgallery_name . '" title="' . $sub_image->post_excerpt . '">';
+                              if ($is_first_sub_image) {
+                                  $gallery_attachments = wp_get_attachment_image_src( $image->ID, 'thumbnail');
+                                  echo '<img src="' . $gallery_attachments[0] . '"></img>';
+                              }
                               $is_first_sub_image = false;
                               echo '</a>';
                             endforeach; ?>
@@ -40,6 +44,6 @@ Template Name: Sliding Gallery Page
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/elastislide/js/jquerypp.custom.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/elastislide/js/jquery.elastislide.js"></script>
 <script type="text/javascript">
-    jQuery( '#carousel' ).elastislide( { minItems : 2 } );
+    jQuery( '#<?php echo $carousel_name; ?>' ).elastislide( { minItems : 2 } );
     jQuery( 'a.colorbox' ).colorbox({maxWidth:'95%', maxHeight:'95%'});
 </script>
