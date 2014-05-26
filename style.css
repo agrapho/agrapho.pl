@@ -74,18 +74,35 @@ input, textarea {
 }
 
 .navbar-nav {
+	float: right;
+	clear: both;
+}
+
+.home .navbar-nav {
 	padding-top: 24px;
 }
 
 .navbar-inverse .navbar-nav > li > a {
 	font-family: bank_gothic;
 	font-weight: bold;
-	font-size: 0.9em;
-	color: #CCCCCC;
+	font-size: 0.8em;
+	color: #555555;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.home .main-menu-nav > li > a,
+.navbar-inverse .submenu-nav > li > a {
+	font-size: 0.9em;
+	color: #CCCCCC;
+}
+
+.page .main-menu-nav > li > a,
+.single .main-menu-nav > li > a {
+	padding-top: 0px;
+	padding-bottom: 5px;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -94,22 +111,6 @@ input, textarea {
 
 .navbar-header .navbar-toggle {
 	z-index: 9999;
-}
-
-.page-title-anchor {
-	position: absolute;
-	right: 30px;
-	top: -20px;
-}
-
-.page-title-anchor a {
-	text-decoration: none;
-	font-size: 2em;
-	color: #444444;
-}
-
-.page-title-anchor a:hover {
-	color: #FFFFFF;
 }
 
 /*========== front-page-header ==========*/
