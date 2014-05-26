@@ -25,7 +25,7 @@ body {
 	background: #000000;
 }
 
-p,a,h1,h2,h3,li {
+p,a,small,h1,h2,h3,li {
 	font-family: bank_gothic;
 	letter-spacing: 1px;
 	color: #FFFFFF;
@@ -360,6 +360,7 @@ input, textarea {
 	background-image: -ms-linear-gradient(right, #000000 0%, #808080 100%);
 	background-image: linear-gradient(to right, #000000 0%, #808080 100%);
 
+	margin-top: 1em;
 	padding-right: 0px;
 }
 

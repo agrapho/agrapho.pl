@@ -6,6 +6,8 @@ Template Name: Pricing packets
 
 <div class="entry-content container">
       <?php echo the_content(); ?>
+      <br/>
+      <small>* Podane seny są cenami netto. Niniejszy cennik nie stanowi oferty w rozumieniu przepisów prawa cywilnego, a jedynie zaproszenie do rozpoczęcia negocjacji.</small>
 </div>
 
 <?php $post_data = get_post($post->post_parent);
