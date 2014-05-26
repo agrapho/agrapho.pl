@@ -98,8 +98,9 @@ function generate_dynamic_thumb($path, $size){
     wp_enqueue_style('main',get_stylesheet_uri());
  }
 
- // wp_title filter
- function page_title( $old_title, $sep, $sep_location ){
+// wp_title filter
+function page_title( $old_title ){
+    $sep = '';
     $ssep = ' ' . $sep . ' ';
 
     // get the page number we're on (index)

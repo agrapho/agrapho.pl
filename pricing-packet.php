@@ -5,14 +5,17 @@
 </div>
 <div class="pricing-packet-overview">
     <div class="pricing-bar"></div>
+    <?php $pricing_packet_details = get_post_meta(get_the_ID(),'wpcf-pricing-packet-details',TRUE);
+          if ($pricing_packet_details) { ?>
+            <div class="pricing-packet-button">
+                <p>Co zawiera?</p>
+            </div>
+            <div class="pricing-packet-details">
+                <?php echo $pricing_packet_details; ?>
+            </div>
+    <?php } ?>
     <div class="pricing-packet-button">
-        <p>Co zawiera?</p>
-    </div>
-    <div class="pricing-packet-details">
-        <?php echo get_post_meta(get_the_ID(),'wpcf-pricing-packet-details',TRUE); ?>
-    </div>
-    <div class="pricing-packet-button">
-        <p>Cena</p>
+        <p>Cennik</p>
     </div>
     <div class="pricing-packet-details pricing-packet-price">
         <?php echo get_post_meta(get_the_ID(),'wpcf-pricing-packet-prices',TRUE); ?>
