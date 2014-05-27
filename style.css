@@ -73,6 +73,10 @@ input, textarea {
 	display: inline;
 }
 
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+
 .navbar-nav {
 	float: right;
 	clear: both;
@@ -111,6 +115,15 @@ input, textarea {
 
 .navbar-header .navbar-toggle {
 	z-index: 9999;
+}
+
+.dropdown-menu {
+	background-color: black;
+}
+
+.dropdown-menu > li > a {
+	font-size: 1em;
+	color: #CCCCCC;
 }
 
 /*========== front-page-header ==========*/
