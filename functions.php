@@ -147,6 +147,15 @@ function get_attachments_by_parent_id($parent_id) {
     return get_posts( $args );
 }
 
+function the_slug($echo=true){
+    $slug = basename(get_permalink());
+    do_action('before_slug', $slug);
+    $slug = apply_filters('slug_filter', $slug);
+    if( $echo ) echo $slug;
+    do_action('after_slug', $slug);
+    return $slug;
+}
+
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 add_filter( 'wp_title', 'page_title');
 add_action( 'after_setup_theme', 'theme_setup' );
