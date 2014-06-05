@@ -122,13 +122,15 @@
   function showBubbles() {
     $('#header-bubbles').show();
     $('.bubble').each(function() {
-	var maxBubbleSize = 300;
+	var maxBubbleSize = 200;
 	var containerWidth = $(window).width();
 	var containerHeight = $('#header-bubbles').height();
 
 	var bubbleSize = Math.random() * 100 + 50;
 	var opacity = (Math.random() + 0.7) / 2;
-	var color = Math.floor(Math.random() * 100 + 150);
+	var rColor = Math.floor(Math.random() * 28 + 32);
+	var gColor = Math.floor(Math.random() * 50 + 150);
+	var bColor = Math.floor(Math.random() * 50 + 150);
 	var left = Math.random() * (containerWidth - maxBubbleSize);
 	var top = Math.random() * (containerHeight - maxBubbleSize) + 80;
 
@@ -139,7 +141,7 @@
 	$(this).width(bubbleSize);
 	$(this).height(bubbleSize);
 	$(this).offset({left: left, top: top});
-	$(this).css("background", "rgba(0, " + color + ", 255, " + opacity + ")");
+	$(this).css("background", "rgba(" + rColor + ", " + gColor + ", " + bColor + ", " + opacity + ")");
     });
   };
 
